@@ -1,0 +1,17 @@
+email-sender project
+
+Firstly, there is a txt file named “emailsender.txt” in same directory which you added user. 
+There is a class named FileFactory that operates file processing features such as append to file, read from file.
+UserDAO which is implemented from IUserDAO is used to use operations in FileFactory Class.
+IUserDAO provides us general using. This class just operates on level of file operations. 
+Business Logic works in UserService implemented IUserService.  
+
+Workflow works:
+
+Txt file is read and map to User model. 
+Operations include methods such as findActiveUsers. 
+We used findActiveUser method to find only active users from file. 
+And there is a method in service layer named sendEmail with mailBody and ActiveUserList parameters. 
+After, we found active users, we pass params to sendEmail method. 
+Finally, email sent activeUsers.(not actually sent. Just shown on console)
+Just execute UnitTest.java
